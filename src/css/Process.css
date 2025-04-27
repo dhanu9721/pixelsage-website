@@ -1,0 +1,89 @@
+.process-section {
+    background-color: #f9f9f9;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  
+  .process-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #052004;
+  }
+  
+  .process-section h2 span {
+    display: block;
+    font-size: 1.5rem;
+    color: #11872d;
+    margin-top: 0.5rem;
+  }
+  
+  .process-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Connecting Line */
+  .process-container::before {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #ccc;
+    z-index: 0;
+  }
+  
+  /* Box */
+  .process-box {
+    background: #ffffff;
+    flex: 1;
+    min-width: 250px;
+    max-width: 280px;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    transition: all 0.3s ease;
+    z-index: 1;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .process-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+  
+  .process-icon {
+    font-size: 2.5rem;
+    color: #11872d;
+    margin-bottom: 1rem;
+  }
+  
+  .process-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #052004;
+  }
+  
+  .process-box p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .process-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .process-container::before {
+      display: none;
+    }
+  }
+  

@@ -1,0 +1,126 @@
+/* About Us Section */
+.about-us-section {
+    padding: 5rem 1rem;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-us-container {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  
+  /* Left Side: Image */
+  .about-us-image {
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-us-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Right Side: Content */
+  .about-us-content {
+    flex: 1.5;
+    text-align: left;
+    max-width: 600px;
+  }
+  
+  .about-us-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .about-us-subtitle {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  .about-us-description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  /* Key Highlights */
+  .about-us-highlights {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .highlight {
+    text-align: center;
+  }
+  
+  .highlight h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #11872d;
+  }
+  
+  .highlight p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Button */
+  .cta-button {
+    background-color: #11872d;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #06641e;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .about-us-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-us-image {
+      max-width: 100%;
+      margin-bottom: 2rem;
+    }
+  
+    .about-us-content {
+      max-width: 100%;
+    }
+  
+    .about-us-highlights {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  
+    .highlight {
+      margin-bottom: 1.5rem;
+    }
+  }
+  
