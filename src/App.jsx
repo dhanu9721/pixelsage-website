@@ -15,13 +15,12 @@ import './css/style.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/pixelsage-website">
       <Navbar />
       <Routes>
         {/* Home Page */}
         <Route path="/" element={
           <>
-            {/* <Header /> */}
             <Hero />
             <Projects />
             <Services />
@@ -34,12 +33,13 @@ function App() {
             </footer>
           </>
         } />
-        
+
         {/* Games Page */}
         <Route path="/games" element={<Games />} />
       </Routes>
     </Router>
   );
 }
+
 
 export default App;
