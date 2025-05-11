@@ -1,36 +1,27 @@
 // Games.jsx
-
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ourGamesData } from '../assets/gameData';
 import '../css/Games.css';
 
 const Games = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedGame, setSelectedGame] = useState(null);
-  const [isPortrait, setIsPortrait] = useState(false);
+  const navigate = useNavigate();
 
   const categories = ['All', 'Hypercasual', 'Casual', 'Slot', 'Multiplayer'];
-
-  const openGame = (game) => {
-    setSelectedGame(game);
-    setIsPortrait(game.orientation === 'portrait'); // Check the orientation (portrait or landscape)
-  };
-
-  const closeGame = () => {
-    setSelectedGame(null);
-  };
 
   const filteredGames = ourGamesData['All'].filter(game =>
     selectedCategory === 'All' || game.category === selectedCategory
   );
 
-  useEffect(() => {
-    if (selectedGame) {
-      document.body.style.overflow = 'hidden'; // prevent background scroll
+   const openGame = (game) => {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+      window.location.href = game.link;
     } else {
-      document.body.style.overflow = 'auto';
+      navigate(`/game-details/${game.id}`);
     }
-  }, [selectedGame]);
+  };
 
   return (
     <div className="games-page">
@@ -56,21 +47,6 @@ const Games = () => {
           </div>
         ))}
       </div>
-
-      {/* Modal Iframe */}
-      {selectedGame && (
-        <div className="game-modal">
-          <div className={`iframe-wrapper ${isPortrait ? 'portrait' : 'landscape'}`}>
-            <button className="close-button" onClick={closeGame}>X</button>
-            <iframe
-              src={selectedGame.link}
-              title={selectedGame.name}
-              frameBorder="0"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

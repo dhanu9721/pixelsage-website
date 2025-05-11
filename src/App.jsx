@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from './components/Header';
 import Navbar from './components/Navbar';
@@ -11,12 +11,13 @@ import Contact from './components/Contact';
 import Portfolio from './components/Portfolio';
 import Process from './components/Process';
 import NotFound from './components/NotFound';
-import Games from './components/Games';  // ✅ Import your Games page
+import Games from './components/Games';
+import GameDetail from './components/GameDetail';
 import './css/style.css';
 
 function App() {
   return (
-    <Router basename="/">
+    <Router>
       <Navbar />
       <Routes>
         {/* Home Page */}
@@ -35,19 +36,20 @@ function App() {
           </>
         } />
 
-        {/* Games Page */}
+        {/* Other Pages */}
         <Route path="/games" element={<Games />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/process" element={<Process />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/games" element={<Games />} />
+        <Route path="/game-details/:id" element={<GameDetail />} />
+
+        {/* Fallback */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
 }
-
 
 export default App;

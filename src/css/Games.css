@@ -18,10 +18,15 @@
   border-radius: 20px;
   cursor: pointer;
   font-size: 16px;
+  transition: background 0.2s;
+}
+
+.category-buttons button:hover {
+  background: #ccc;
 }
 
 .category-buttons button.active {
-  background: #4CAF50;
+  background: #4caf50;
   color: white;
 }
 
@@ -38,7 +43,7 @@
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 200px;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
   cursor: pointer;
 }
 
@@ -52,7 +57,7 @@
   object-fit: contain;
 }
 
-/* Modal styles */
+/* Modal Styles */
 .game-modal {
   position: fixed;
   top: 0;
@@ -71,21 +76,22 @@
 .iframe-wrapper {
   position: relative;
   background: black;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
+  max-height: 100%;
 }
 
-/* Landscape Game */
+/* Orientation-specific sizes */
 .iframe-wrapper.landscape {
   width: 90vw;
   height: 70vh;
 }
 
-/* Portrait Game */
 .iframe-wrapper.portrait {
   width: 400px;
   height: 90vh;
@@ -100,27 +106,39 @@ iframe {
 /* Close Button */
 .close-button {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 12px;
+  right: 12px;
   background: #ff3333;
   color: white;
   border: none;
   font-size: 20px;
-  padding: 8px 12px;
+  padding: 6px 12px;
   border-radius: 50%;
   cursor: pointer;
+  transition: background 0.2s;
   z-index: 100;
 }
 
-/* Responsive Mobile */
+.close-button:hover {
+  background: #e60000;
+}
+
+/* Mobile Optimization */
 @media (max-width: 768px) {
   .iframe-wrapper.landscape {
     width: 95vw;
-    height: 70vh;
+    height: 65vh;
   }
 
   .iframe-wrapper.portrait {
     width: 90vw;
     height: 85vh;
+  }
+
+  .close-button {
+    top: 8px;
+    right: 8px;
+    font-size: 18px;
+    padding: 5px 10px;
   }
 }
