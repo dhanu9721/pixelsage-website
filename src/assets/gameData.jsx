@@ -1,6 +1,8 @@
 import game1Icon from "./Characters/1.png";
 import luxurySlotIcon from "./Characters/7.png";
 import jockerIcon from "./Characters/11.png";
+import rouletteIcon from "./Characters/roulette_logo.png";
+import aviatorIcon from "./Characters/aviator_logo.png";
 export const gameData = [
   {
     title: "Hexa Sort",
@@ -54,19 +56,19 @@ export const ourGamesData = {
     },
     {
       id:"3",
-      name: "HaxaPuzzle",
-      category: "Hypercasual",
-      link: "https://dhanu9721.github.io/TestHtml5/",
-      icon: game1Icon,
-      orientation: "portrait",
+      name: "Roulette",
+      category: "Slot",
+      link: "https://dhanu9721.github.io/RouletteDemo/",
+      icon: rouletteIcon,
+      orientation: "landscape",
     },
     {
       id:"4",
-      name: "BlockBlast",
-      category: "Casual",
-      link: "https://dhanu9721.github.io/TestHtml5/",
-      icon: game1Icon,
-      orientation: "portrait",
+      name: "Aviator",
+      category: "slot",
+      link: "https://dhanu9721.github.io/AviatorDemo/",
+      icon: aviatorIcon,
+      orientation: "landscape",
     },
     {
       id:"5",
