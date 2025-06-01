@@ -3,6 +3,7 @@ import luxurySlotIcon from "./Characters/7.png";
 import jockerIcon from "./Characters/11.png";
 import rouletteIcon from "./Characters/roulette_logo.png";
 import aviatorIcon from "./Characters/aviator_logo.png";
+import pokerIcon from "./Characters/pokerLogo.png";
 export const gameData = [
   {
     title: "Hexa Sort",
@@ -72,11 +73,11 @@ export const ourGamesData = {
     },
     {
       id:"5",
-      name: "Normal Slot",
+      name: "Texas Poker",
       category: "Slot",
-      link: "https://dhanu9721.github.io/LifeOfLuxurySlotDemo/",
-      icon: game1Icon,
-      orientation: "portrait",
+      link: "https://dhanu9721.github.io/TexasPokerDemo/",
+      icon: pokerIcon,
+      orientation: "landscape",
     },
     {
       id:"6",
