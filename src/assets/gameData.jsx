@@ -4,6 +4,7 @@ import jockerIcon from "./Characters/11.png";
 import rouletteIcon from "./Characters/roulette_logo.png";
 import aviatorIcon from "./Characters/aviator_logo.png";
 import pokerIcon from "./Characters/pokerLogo.png";
+import fishIcon from "./Characters/FishLogo.png";
 export const gameData = [
   {
     title: "Hexa Sort",
@@ -66,7 +67,7 @@ export const ourGamesData = {
     {
       id:"4",
       name: "Aviator",
-      category: "slot",
+      category: "Multiplayer",
       link: "https://dhanu9721.github.io/AviatorDemo/",
       icon: aviatorIcon,
       orientation: "landscape",
@@ -74,18 +75,18 @@ export const ourGamesData = {
     {
       id:"5",
       name: "Texas Poker",
-      category: "Slot",
+      category: "Multiplayer",
       link: "https://dhanu9721.github.io/TexasPokerDemo/",
       icon: pokerIcon,
       orientation: "landscape",
     },
     {
       id:"6",
-      name: "Expanding Wild Slot",
-      category: "Slot",
-      link: "https://dhanu9721.github.io/LifeOfLuxurySlotDemo/",
-      icon: game1Icon,
-      orientation: "portrait",
+      name: "Ocean War",
+      category: "Multiplayer",
+      link: "https://dhanu9721.github.io/FishGameCocosDemo/",
+      icon: fishIcon,
+      orientation: "landscape",
     },
     {
       id:"7",
@@ -93,29 +94,29 @@ export const ourGamesData = {
       category: "Slot",
       link: "https://dhanu9721.github.io/LifeOfLuxurySlotDemo/",
       icon: game1Icon,
-      orientation: "portrait",
+      orientation: "landscape",
     },
     {
       id:"8",
-      name: "Poker",
+      name: "Black Jack",
       category: "Multiplayer",
-      link: "https://dhanu9721.github.io/TestHtml5/",
+      link: "https://dhanu9721.github.io/TexasPokerDemo/",
       icon: game1Icon,
-      orientation: "portrait",
+      orientation: "landscape",
     },
     {
       id:"9",
       name: "Teen Patti",
       category: "Multiplayer",
-      link: "https://dhanu9721.github.io/TestHtml5/",
+      link: "https://dhanu9721.github.io/TexasPokerDemo/",
       icon: game1Icon,
-      orientation: "portrait",
+      orientation: "landscape",
     },
     {
       id:"10",
       name: "Rummy",
       category: "Multiplayer",
-      link: "https://dhanu9721.github.io/TestHtml5/",
+      link: "https://dhanu9721.github.io/TexasPokerDemo/",
       icon: game1Icon,
       orientation: "landscape",
     },
